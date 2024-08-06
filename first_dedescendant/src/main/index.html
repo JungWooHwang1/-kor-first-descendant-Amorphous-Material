@@ -60,8 +60,13 @@
         }
 
         .blurred {
-            opacity: 0.5;
+            background-color: #fff;
+            opacity: 0.2;
             /* 흐리게 처리 */
+        }
+
+        .highlighted {
+            background-color: #f0f0f0;
         }
 
         .form-control {
@@ -139,7 +144,8 @@
 
 <body>
     <div class="container" style="max-width: 120%;">
-        <h1 class="mt-4">퍼스트 디센던트 비정형물질 검색 1.1.0</h1>
+        <h1 class="mt-4">퍼스트 디센던트 비정형물질 검색 1.1.2 무기 필드 추가</h1>
+        <h2>우측상단 아이콘 클릭 피드백은 디코로~</h2>
         <input type="text" id="searchInput1" class="form-control" placeholder="검색어를 입력하세요"
             style="background-color: #f5f5dc;">
         <input type="text" id="searchInput2" class="form-control" placeholder="검색어를 입력하세요"
@@ -160,14 +166,14 @@
         <table>
             <tr>
                 <th>무기 이름</th>
-                <th>고분자 융합체</th>
-                <th>합성 광섬유</th>
-                <th>나노 튜브</th>
-                <th>연구 도면</th>
+                <th class="Polymer Syncytium">고분자 융합체</th>
+                <th class="Fiber Blueprint">합성 광섬유</th>
+                <th class="Nano Tube">나노 튜브</th>
+                <th class="Blueprint">연구 도면</th>
                 <th>완성한 개수</th>
             </tr>
             <tr>
-                <td>간파하는 자</td>
+                <td class="Perforator">간파하는 자</td>
                 <td><input type="number" class="r1c1" min="0" max="5"></td>
                 <td><input type="number" class="r2c1" min="0" max="5"></td>
                 <td><input type="number" class="r3c1" min="0" max="5"></td>
@@ -175,12 +181,140 @@
                 <td><input type="number" class="r5c1" min="0" max="5"></td>
             </tr>
             <tr>
-                <td>검의 잔광</td>
+                <td class="Afterglow Sword">검의 잔광</td>
                 <td><input type="number" class="r1c2" min="0" max="5"></td>
                 <td><input type="number" class="r2c2" min="0" max="5"></td>
                 <td><input type="number" class="r3c2" min="0" max="5"></td>
                 <td><input type="number" class="r4c2" min="0" max="5"></td>
                 <td><input type="number" class="r5c2" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Piercing Light">관통하는 빛</td>
+                <td><input type="number" class="r1c3" min="0" max="5"></td>
+                <td><input type="number" class="r2c3" min="0" max="5"></td>
+                <td><input type="number" class="r3c3" min="0" max="5"></td>
+                <td><input type="number" class="r4c3" min="0" max="5"></td>
+                <td><input type="number" class="r5c3" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Greg's Reversed Fate">그렉의 뒤바뀐 운명</td>
+                <td><input type="number" class="r1c4" min="0" max="5"></td>
+                <td><input type="number" class="r2c4" min="0" max="5"></td>
+                <td><input type="number" class="r3c4" min="0" max="5"></td>
+                <td><input type="number" class="r4c4" min="0" max="5"></td>
+                <td><input type="number" class="r5c4" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Nazeistra's Devotion">나제스트라의 헌신</td>
+                <td><input type="number" class="r1c5" min="0" max="5"></td>
+                <td><input type="number" class="r2c5" min="0" max="5"></td>
+                <td><input type="number" class="r3c5" min="0" max="5"></td>
+                <td><input type="number" class="r4c5" min="0" max="5"></td>
+                <td><input type="number" class="r5c5" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Restored Relic">복원된 유물</td>
+                <td><input type="number" class="r1c6" min="0" max="5"></td>
+                <td><input type="number" class="r2c6" min="0" max="5"></td>
+                <td><input type="number" class="r3c6" min="0" max="5"></td>
+                <td><input type="number" class="r4c6" min="0" max="5"></td>
+                <td><input type="number" class="r5c6" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Python">비단뱀</td>
+                <td><input type="number" class="r1c7" min="0" max="5"></td>
+                <td><input type="number" class="r2c7" min="0" max="5"></td>
+                <td><input type="number" class="r3c7" min="0" max="5"></td>
+                <td><input type="number" class="r4c7" min="0" max="5"></td>
+                <td><input type="number" class="r5c7" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Secret Garden">비밀정원</td>
+                <td><input type="number" class="r1c8" min="0" max="5"></td>
+                <td><input type="number" class="r2c8" min="0" max="5"></td>
+                <td><input type="number" class="r3c8" min="0" max="5"></td>
+                <td><input type="number" class="r4c8" min="0" max="5"></td>
+                <td><input type="number" class="r5c8" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Wave of Light">빛의 파도</td>
+                <td><input type="number" class="r1c9" min="0" max="5"></td>
+                <td><input type="number" class="r2c9" min="0" max="5"></td>
+                <td><input type="number" class="r3c9" min="0" max="5"></td>
+                <td><input type="number" class="r4c9" min="0" max="5"></td>
+                <td><input type="number" class="r5c9" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Smithereens">산산조각</td>
+                <td><input type="number" class="r1c10" min="0" max="5"></td>
+                <td><input type="number" class="r2c10" min="0" max="5"></td>
+                <td><input type="number" class="r3c10" min="0" max="5"></td>
+                <td><input type="number" class="r4c10" min="0" max="5"></td>
+                <td><input type="number" class="r5c10" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Albion Cavalry Gun">알비온 기병총</td>
+                <td><input type="number" class="r1c11" min="0" max="5"></td>
+                <td><input type="number" class="r2c11" min="0" max="5"></td>
+                <td><input type="number" class="r3c11" min="0" max="5"></td>
+                <td><input type="number" class="r4c11" min="0" max="5"></td>
+                <td><input type="number" class="r5c11" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="King's Guard Lance">왕의 수호창</td>
+                <td><input type="number" class="r1c12" min="0" max="5"></td>
+                <td><input type="number" class="r2c12" min="0" max="5"></td>
+                <td><input type="number" class="r3c12" min="0" max="5"></td>
+                <td><input type="number" class="r4c12" min="0" max="5"></td>
+                <td><input type="number" class="r5c12" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Enduring Legacy">위대한 유산</td>
+                <td><input type="number" class="r1c13" min="0" max="5"></td>
+                <td><input type="number" class="r2c13" min="0" max="5"></td>
+                <td><input type="number" class="r3c13" min="0" max="5"></td>
+                <td><input type="number" class="r4c13" min="0" max="5"></td>
+                <td><input type="number" class="r5c13" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Executor">집행자</td>
+                <td><input type="number" class="r1c14" min="0" max="5"></td>
+                <td><input type="number" class="r2c14" min="0" max="5"></td>
+                <td><input type="number" class="r3c14" min="0" max="5"></td>
+                <td><input type="number" class="r4c14" min="0" max="5"></td>
+                <td><input type="number" class="r5c14" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Clairvoyance">천리안</td>
+                <td><input type="number" class="r1c15" min="0" max="5"></td>
+                <td><input type="number" class="r2c15" min="0" max="5"></td>
+                <td><input type="number" class="r3c15" min="0" max="5"></td>
+                <td><input type="number" class="r4c15" min="0" max="5"></td>
+                <td><input type="number" class="r5c15" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Divine Punishment">천벌</td>
+                <td><input type="number" class="r1c16" min="0" max="5"></td>
+                <td><input type="number" class="r2c16" min="0" max="5"></td>
+                <td><input type="number" class="r3c16" min="0" max="5"></td>
+                <td><input type="number" class="r4c16" min="0" max="5"></td>
+                <td><input type="number" class="r5c16" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="Blue Beetle">청풍뎅이</td>
+                <td><input type="number" class="r1c17" min="0" max="5"></td>
+                <td><input type="number" class="r2c17" min="0" max="5"></td>
+                <td><input type="number" class="r3c17" min="0" max="5"></td>
+                <td><input type="number" class="r4c17" min="0" max="5"></td>
+                <td><input type="number" class="r5c17" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td class="The Final Masterpiece">최후의 걸작</td>
+                <td><input type="number" class="r1c18" min="0" max="5"></td>
+                <td><input type="number" class="r2c18" min="0" max="5"></td>
+                <td><input type="number" class="r3c18" min="0" max="5"></td>
+                <td><input type="number" class="r4c18" min="0" max="5"></td>
+                <td><input type="number" class="r5c18" min="0" max="5"></td>
             </tr>
         </table>
         <br>
@@ -191,7 +325,7 @@
                 <th>강화 세포 도면</th>
                 <th>안정화 장치 도면</th>
                 <th>나선 촉매 도면</th>
-                <th>연구 코드</th>
+                <th>코드</th>
                 <th>완성 여부</th>
             </tr>
         </table>
@@ -274,27 +408,177 @@
             }
         }
 
-        function checkAndBlur() {
-            const r1c2Value = document.querySelector('.r1c2').value;
+        const weapons = {
+    "간파하는 자": ['r1c1', 'r2c1', 'r3c1', 'r4c1', 'r5c1'],
+    "검의 잔광": ['r1c2', 'r2c2', 'r3c2', 'r4c2', 'r5c2'],
+    "관통하는 빛": ['r1c3', 'r2c3', 'r3c3', 'r4c3', 'r5c3'],
+    "그렉의 뒤바뀐 운명": ['r1c4', 'r2c4', 'r3c4', 'r4c4', 'r5c4'],
+    "나제스트라의 헌신": ['r1c5', 'r2c5', 'r3c5', 'r4c5', 'r5c5'],
+    "복원된 유물": ['r1c6', 'r2c6', 'r3c6', 'r4c6', 'r5c6'],
+    "비단뱀": ['r1c7', 'r2c7', 'r3c7', 'r4c7', 'r5c7'],
+    "비밀정원": ['r1c8', 'r2c8', 'r3c8', 'r4c8', 'r5c8'],
+    "빛의 파도": ['r1c9', 'r2c9', 'r3c9', 'r4c9', 'r5c9'],
+    "산산조각": ['r1c10', 'r2c10', 'r3c10', 'r4c10', 'r5c10'],
+    "알비온 기병총": ['r1c11', 'r2c11', 'r3c11', 'r4c11', 'r5c11'],
+    "왕의 수호창": ['r1c12', 'r2c12', 'r3c12', 'r4c12', 'r5c12'],
+    "위대한 유산": ['r1c13', 'r2c13', 'r3c13', 'r4c13', 'r5c13'],
+    "집행자": ['r1c14', 'r2c14', 'r3c14', 'r4c14', 'r5c14'],
+    "천리안": ['r1c15', 'r2c15', 'r3c15', 'r4c15', 'r5c15'],
+    "천벌": ['r1c16', 'r2c16', 'r3c16', 'r4c16', 'r5c16'],
+    "청풍뎅이": ['r1c17', 'r2c17', 'r3c17', 'r4c17', 'r5c17'],
+    "최후의 걸작": ['r1c18', 'r2c18', 'r3c18', 'r4c18', 'r5c18'],
+};
 
-            const table = document.querySelector('table');
-            const rows = table.getElementsByTagName('tr');
+const resources = ['고분자 융합체', '합성 광섬유', '나노 튜브', '연구 도면'];
 
-            for (let i = 1; i < rows.length; i++) {
-                const cells = rows[i].getElementsByTagName('td');
-                for (let j = 0; j < cells.length; j++) {
-                    if (cells[j].textContent.includes('검의 잔광 고분자 융합체')) {
-                        if (r1c2Value == 5) {
-                            cells[j].classList.add('blurred');
-                        } else {
-                            cells[j].classList.remove('blurred');
-                        }
-                    }
-                }
+// 블러 상태를 로컬 스토리지에 저장
+function saveBlurState() {
+    console.log('Saving blur state to local storage');
+
+    const blurredCells = Array.from(document.querySelectorAll('td.blurred')).map(cell => cell.className);
+    localStorage.setItem('blurredCells', JSON.stringify(blurredCells));
+}
+
+// 블러 상태를 로컬 스토리지에서 복원
+function restoreBlurState() {
+    console.log('Restoring blur state from local storage');
+
+    const blurredCells = JSON.parse(localStorage.getItem('blurredCells') || '[]');
+    blurredCells.forEach(cellClass => {
+        const cell = document.querySelector(`.${cellClass}`);
+        if (cell) {
+            cell.classList.add('blurred');
+            cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
+        }
+    });
+}
+
+// 필드 값 저장
+function saveToLocalStorage() {
+    console.log('Saving data to local storage');
+
+    Object.values(weapons).flat().forEach(cellClass => {
+        const input = document.querySelector(`.${cellClass}`);
+        if (input) {
+            localStorage.setItem(cellClass, input.value);
+            console.log(`Saved ${cellClass} with value ${input.value}`);
+        }
+    });
+
+    document.querySelectorAll('input[type="number"].completed').forEach(input => {
+        if (input) {
+            localStorage.setItem(input.className, input.value);
+            console.log(`Saved ${input.className} with value ${input.value}`);
+        }
+    });
+}
+
+// 필드 값 복원
+function loadFromLocalStorage() {
+    console.log('Loading data from local storage');
+
+    Object.values(weapons).flat().forEach(cellClass => {
+        const input = document.querySelector(`.${cellClass}`);
+        if (input) {
+            const savedValue = localStorage.getItem(cellClass);
+            if (savedValue) {
+                input.value = savedValue;
+                console.log(`Loaded ${cellClass} with value ${savedValue}`);
             }
         }
+    });
 
-        document.querySelector('.r1c2').addEventListener('input', checkAndBlur);
+    document.querySelectorAll('input[type="number"].completed').forEach(input => {
+        if (input) {
+            const savedValue = localStorage.getItem(input.className);
+            if (savedValue) {
+                input.value = savedValue;
+                console.log(`Loaded ${input.className} with value ${savedValue}`);
+            }
+        }
+    });
+}
+
+// 필드 값과 블러 상태를 업데이트
+function checkAndBlur() {
+    console.log('Check and Blur Function Called');
+
+    const table = document.querySelector('table');
+    const rows = table.getElementsByTagName('tr');
+
+    // 블러 처리가 필요한 모든 셀 처리
+    for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        for (let j = 0; j < cells.length; j++) {
+            const cell = cells[j];
+            const cellText = cell.textContent.trim();
+            let shouldBlur = false;
+
+            // 무기와 자원의 블러 처리
+            Object.keys(weapons).forEach(weapon => {
+                if (cellText.includes(weapon)) {
+                    resources.forEach((resource, index) => {
+                        if (cellText.includes(resource)) {
+                            const inputValue = Number(document.querySelector(`.${weapons[weapon][index]}`).value);
+                            if (inputValue >= 5) {
+                                shouldBlur = true;
+                            }
+                        }
+                    });
+                }
+            });
+
+            if (shouldBlur) {
+                cell.classList.add('blurred');
+                cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
+                console.log(`Cell ${cell.className} added blurred class and background color`);
+            } else {
+                cell.classList.remove('blurred');
+                cell.style.backgroundColor = ''; // 배경 색 초기화
+                console.log(`Cell ${cell.className} removed blurred class`);
+            }
+        }
+    }
+
+    // 블러 상태를 로컬 스토리지에 저장
+    saveBlurState();
+}
+
+// 이벤트 리스너 추가
+Object.values(weapons).flat().forEach(inputClass => {
+    const inputs = document.querySelectorAll(`.${inputClass}`);
+    inputs.forEach(input => {
+        if (input) {
+            input.addEventListener('input', () => {
+                checkAndBlur();
+                saveToLocalStorage();
+            });
+            console.log(`Event listener added to input ${input.className}`);
+        }
+    });
+});
+
+// '완성한 개수' 입력 필드에 이벤트 리스너 추가
+document.querySelectorAll('input[type="number"].completed').forEach(input => {
+    if (input) {
+        input.addEventListener('input', () => {
+            checkAndBlur();
+            saveToLocalStorage();
+        });
+        console.log(`Event listener added to completion input ${input.className}`);
+    }
+});
+
+// 페이지 로드 시 상태 복원
+document.addEventListener('DOMContentLoaded', () => {
+    loadFromLocalStorage();
+    restoreBlurState(); // 필드 값 복원 후 블러 상태 복원
+    checkAndBlur(); // 블러 상태를 다시 업데이트
+});
+
+
+
+
         document.getElementById('searchInput1').addEventListener('input', filterTable);
         document.getElementById('searchInput2').addEventListener('input', filterTable);
         document.getElementById('searchInput3').addEventListener('input', filterTable);
@@ -445,7 +729,7 @@
             ['121 (잠입/융합로)', '에너지 활성체 연구 도면', '얼티밋 에이잭스 강화 세포 도면', '일반 에시모 강화 세포 도면', '천리안 합성 광섬유', '집행자 연구 도면', '초소', '요새 - 고열원체 시설', '추락한 방주 / 넥베트'],
             ['122 (정찰/융합로)', '얼티밋 글레이 강화 세포 도면', '간파하는 자 연구 도면', '결정화 촉매 연구 도면', '검의 잔광 고분자 융합체', '일반 레픽 안정화 장치 도면', '초소', '요새 - 방어선', '방어선 / 그라모스 리부트'],
             ['123 (잠입/융합로)', '에너지 활성체 연구 도면', '일반 카일 나선 촉매 도면', '얼티밋 버니 나선 촉매 도면', '비단뱀 연구 도면', '천벌 합성 광섬유', '초소', '요새 - 방어선', '방어선 / 그라모스 리부트'],
-            ['124 (침투/요격전)', '얼티밋 에이잭스 나선 촉매 도면', '일반 글레이 코드', '결정화 촉매 연구 도면', '복원된 유물 고분자 융합체', '간파하는 자 합성 광섬유', '침투', '요새 - 봉쇄구역', '어려움 / 몰튼 포트리스'],
+            ['124 (침투/요격전)', '얼티밋 에이잭스 나선 촉매 도면', '일반 글레이 코드', '결정화 촉매 연구 도면', '복원된 유물 고분자 융합체', '간파하는 자 합성 광섬유', '침투', '요새 - 봉쇄	구역', '어려움 / 몰튼 포트리스'],
             ['125 (침투/요격전)', '에너지 활성체 연구 도면', '얼티밋 비에사 코드', '일반 유진 나선 촉매 도면', '관통하는 빛 합성 광섬유', '빛의 파도 고분자 융합체', '침투', '요새 - 봉쇄구역', '어려움 / 몰튼 포트리스'],
             ['125 변종AA', '에너지 활성체 연구 도면', '얼티밋 비에사 코드', '얼티밋 밸비 코드', '관통하는 빛 합성 광섬유', '빛의 파도 고분자 융합체', '침투', '요새 - 봉쇄구역', '어려움 / 글러트니'],
             ['126 (침투/요격전)', '얼티밋 글레이 코드', '일반 에이잭스 나선 촉매 도면', '결정화 촉매 연구 도면', '천벌 고분자 융합체', '위대한 유산 합성 광섬유', '침투', '요새 - 요새 핵심부', '어려움 / 몰튼 포트리스'],
@@ -459,6 +743,7 @@
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('hidden');
         });
+
     </script>
 </body>
 
