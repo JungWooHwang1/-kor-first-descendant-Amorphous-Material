@@ -2,7 +2,7 @@
 
 https://66b26a26ab505b3da807383d--firstdescendantinfo.netlify.app/
 
-#discord __._potato__._
+#discord potaatpo
 
 
 
