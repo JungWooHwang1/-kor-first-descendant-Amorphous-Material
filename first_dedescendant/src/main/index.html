@@ -33,6 +33,7 @@
 
         table {
             border-collapse: collapse;
+
             padding: 4px;
             width: 100%;
         }
@@ -40,6 +41,7 @@
         th,
         td {
             border: 1px solid #ddd;
+
             text-align: center;
         }
 
@@ -62,6 +64,7 @@
         .blurred {
             background-color: #fff;
             opacity: 0.2;
+
             /* 흐리게 처리 */
         }
 
@@ -92,6 +95,10 @@
             padding: 1rem;
             z-index: 1000;
             transition: transform 0.3s ease;
+            overflow-y: auto;
+            /* 세로 스크롤 추가 */
+            box-sizing: border-box;
+            /* 패딩과 보더를 포함하도록 설정 */
         }
 
         .sidebar.hidden {
@@ -129,9 +136,6 @@
             border-radius: 1rem;
             cursor: pointer;
             z-index: 1001;
-        }
-
-        #toggleSidebarBtn {
             width: 40px;
             height: 40px;
         }
@@ -163,200 +167,40 @@
         <h3>유저 정보</h3>
         <br>
         <h2>무기</h2>
-        <table>
-            <tr>
-                <th>무기 이름</th>
-                <th class="Polymer Syncytium">고분자 융합체</th>
-                <th class="Fiber Blueprint">합성 광섬유</th>
-                <th class="Nano Tube">나노 튜브</th>
-                <th class="Blueprint">연구 도면</th>
-                <th>완성한 개수</th>
-            </tr>
-            <tr>
-                <td class="Perforator">간파하는 자</td>
-                <td><input type="number" class="r1c1" min="0" max="5"></td>
-                <td><input type="number" class="r2c1" min="0" max="5"></td>
-                <td><input type="number" class="r3c1" min="0" max="5"></td>
-                <td><input type="number" class="r4c1" min="0" max="5"></td>
-                <td><input type="number" class="r5c1" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Afterglow Sword">검의 잔광</td>
-                <td><input type="number" class="r1c2" min="0" max="5"></td>
-                <td><input type="number" class="r2c2" min="0" max="5"></td>
-                <td><input type="number" class="r3c2" min="0" max="5"></td>
-                <td><input type="number" class="r4c2" min="0" max="5"></td>
-                <td><input type="number" class="r5c2" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Piercing Light">관통하는 빛</td>
-                <td><input type="number" class="r1c3" min="0" max="5"></td>
-                <td><input type="number" class="r2c3" min="0" max="5"></td>
-                <td><input type="number" class="r3c3" min="0" max="5"></td>
-                <td><input type="number" class="r4c3" min="0" max="5"></td>
-                <td><input type="number" class="r5c3" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Greg's Reversed Fate">그렉의 뒤바뀐 운명</td>
-                <td><input type="number" class="r1c4" min="0" max="5"></td>
-                <td><input type="number" class="r2c4" min="0" max="5"></td>
-                <td><input type="number" class="r3c4" min="0" max="5"></td>
-                <td><input type="number" class="r4c4" min="0" max="5"></td>
-                <td><input type="number" class="r5c4" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Nazeistra's Devotion">나제스트라의 헌신</td>
-                <td><input type="number" class="r1c5" min="0" max="5"></td>
-                <td><input type="number" class="r2c5" min="0" max="5"></td>
-                <td><input type="number" class="r3c5" min="0" max="5"></td>
-                <td><input type="number" class="r4c5" min="0" max="5"></td>
-                <td><input type="number" class="r5c5" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Restored Relic">복원된 유물</td>
-                <td><input type="number" class="r1c6" min="0" max="5"></td>
-                <td><input type="number" class="r2c6" min="0" max="5"></td>
-                <td><input type="number" class="r3c6" min="0" max="5"></td>
-                <td><input type="number" class="r4c6" min="0" max="5"></td>
-                <td><input type="number" class="r5c6" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Python">비단뱀</td>
-                <td><input type="number" class="r1c7" min="0" max="5"></td>
-                <td><input type="number" class="r2c7" min="0" max="5"></td>
-                <td><input type="number" class="r3c7" min="0" max="5"></td>
-                <td><input type="number" class="r4c7" min="0" max="5"></td>
-                <td><input type="number" class="r5c7" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Secret Garden">비밀정원</td>
-                <td><input type="number" class="r1c8" min="0" max="5"></td>
-                <td><input type="number" class="r2c8" min="0" max="5"></td>
-                <td><input type="number" class="r3c8" min="0" max="5"></td>
-                <td><input type="number" class="r4c8" min="0" max="5"></td>
-                <td><input type="number" class="r5c8" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Wave of Light">빛의 파도</td>
-                <td><input type="number" class="r1c9" min="0" max="5"></td>
-                <td><input type="number" class="r2c9" min="0" max="5"></td>
-                <td><input type="number" class="r3c9" min="0" max="5"></td>
-                <td><input type="number" class="r4c9" min="0" max="5"></td>
-                <td><input type="number" class="r5c9" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Smithereens">산산조각</td>
-                <td><input type="number" class="r1c10" min="0" max="5"></td>
-                <td><input type="number" class="r2c10" min="0" max="5"></td>
-                <td><input type="number" class="r3c10" min="0" max="5"></td>
-                <td><input type="number" class="r4c10" min="0" max="5"></td>
-                <td><input type="number" class="r5c10" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Albion Cavalry Gun">알비온 기병총</td>
-                <td><input type="number" class="r1c11" min="0" max="5"></td>
-                <td><input type="number" class="r2c11" min="0" max="5"></td>
-                <td><input type="number" class="r3c11" min="0" max="5"></td>
-                <td><input type="number" class="r4c11" min="0" max="5"></td>
-                <td><input type="number" class="r5c11" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="King's Guard Lance">왕의 수호창</td>
-                <td><input type="number" class="r1c12" min="0" max="5"></td>
-                <td><input type="number" class="r2c12" min="0" max="5"></td>
-                <td><input type="number" class="r3c12" min="0" max="5"></td>
-                <td><input type="number" class="r4c12" min="0" max="5"></td>
-                <td><input type="number" class="r5c12" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Enduring Legacy">위대한 유산</td>
-                <td><input type="number" class="r1c13" min="0" max="5"></td>
-                <td><input type="number" class="r2c13" min="0" max="5"></td>
-                <td><input type="number" class="r3c13" min="0" max="5"></td>
-                <td><input type="number" class="r4c13" min="0" max="5"></td>
-                <td><input type="number" class="r5c13" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Executor">집행자</td>
-                <td><input type="number" class="r1c14" min="0" max="5"></td>
-                <td><input type="number" class="r2c14" min="0" max="5"></td>
-                <td><input type="number" class="r3c14" min="0" max="5"></td>
-                <td><input type="number" class="r4c14" min="0" max="5"></td>
-                <td><input type="number" class="r5c14" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Clairvoyance">천리안</td>
-                <td><input type="number" class="r1c15" min="0" max="5"></td>
-                <td><input type="number" class="r2c15" min="0" max="5"></td>
-                <td><input type="number" class="r3c15" min="0" max="5"></td>
-                <td><input type="number" class="r4c15" min="0" max="5"></td>
-                <td><input type="number" class="r5c15" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Divine Punishment">천벌</td>
-                <td><input type="number" class="r1c16" min="0" max="5"></td>
-                <td><input type="number" class="r2c16" min="0" max="5"></td>
-                <td><input type="number" class="r3c16" min="0" max="5"></td>
-                <td><input type="number" class="r4c16" min="0" max="5"></td>
-                <td><input type="number" class="r5c16" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="Blue Beetle">청풍뎅이</td>
-                <td><input type="number" class="r1c17" min="0" max="5"></td>
-                <td><input type="number" class="r2c17" min="0" max="5"></td>
-                <td><input type="number" class="r3c17" min="0" max="5"></td>
-                <td><input type="number" class="r4c17" min="0" max="5"></td>
-                <td><input type="number" class="r5c17" min="0" max="5"></td>
-            </tr>
-            <tr>
-                <td class="The Final Masterpiece">최후의 걸작</td>
-                <td><input type="number" class="r1c18" min="0" max="5"></td>
-                <td><input type="number" class="r2c18" min="0" max="5"></td>
-                <td><input type="number" class="r3c18" min="0" max="5"></td>
-                <td><input type="number" class="r4c18" min="0" max="5"></td>
-                <td><input type="number" class="r5c18" min="0" max="5"></td>
-            </tr>
+        <table id="weapon-table">
+            <thead>
+                <tr>
+                    <th>무기 이름</th>
+                    <th>고분자 융합체</th>
+                    <th>합성 광섬유</th>
+                    <th>나노 튜브</th>
+                    <th>연구 도면</th>
+                    <th>완성한 개수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 사이드 바 테이블 생성 javascript로 자동화-->
+            </tbody>
         </table>
         <br>
-        <h2>캐릭터</h2>
-        <table>
-            <tr>
-                <th>계승자</th>
-                <th>강화 세포 도면</th>
-                <th>안정화 장치 도면</th>
-                <th>나선 촉매 도면</th>
-                <th>코드</th>
-                <th>완성 여부</th>
-            </tr>
+        <h2>계승자</h2>
+        <table id="character-table">
+            <thead>
+                <tr>
+                    <th>계승자</th>
+                    <th>강화 세포 도면</th>
+                    <th>안정화 장치 도면</th>
+                    <th>나선 촉매 도면</th>
+                    <th>코드</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here by JavaScript -->
+            </tbody>
         </table>
     </div>
 
     <script>
-        function createTable(headers, dataRows) {
-            const table = document.createElement('table');
-            table.className = 'table table-striped';
-
-            const headerRow = document.createElement('tr');
-            headers.forEach(header => {
-                const th = document.createElement('th');
-                th.textContent = header;
-                headerRow.appendChild(th);
-            });
-            table.appendChild(headerRow);
-
-            dataRows.forEach(rowData => {
-                const tr = document.createElement('tr');
-                rowData.forEach(data => {
-                    const td = document.createElement('td');
-                    td.textContent = data;
-                    tr.appendChild(td);
-                });
-                table.appendChild(tr);
-            });
-
-            return table;
-        }
-
         function filterTable() {
             const input1 = document.getElementById('searchInput1').value.toLowerCase();
             const input2 = document.getElementById('searchInput2').value.toLowerCase();
@@ -408,176 +252,409 @@
             }
         }
 
-        const weapons = {
-    "간파하는 자": ['r1c1', 'r2c1', 'r3c1', 'r4c1', 'r5c1'],
-    "검의 잔광": ['r1c2', 'r2c2', 'r3c2', 'r4c2', 'r5c2'],
-    "관통하는 빛": ['r1c3', 'r2c3', 'r3c3', 'r4c3', 'r5c3'],
-    "그렉의 뒤바뀐 운명": ['r1c4', 'r2c4', 'r3c4', 'r4c4', 'r5c4'],
-    "나제스트라의 헌신": ['r1c5', 'r2c5', 'r3c5', 'r4c5', 'r5c5'],
-    "복원된 유물": ['r1c6', 'r2c6', 'r3c6', 'r4c6', 'r5c6'],
-    "비단뱀": ['r1c7', 'r2c7', 'r3c7', 'r4c7', 'r5c7'],
-    "비밀정원": ['r1c8', 'r2c8', 'r3c8', 'r4c8', 'r5c8'],
-    "빛의 파도": ['r1c9', 'r2c9', 'r3c9', 'r4c9', 'r5c9'],
-    "산산조각": ['r1c10', 'r2c10', 'r3c10', 'r4c10', 'r5c10'],
-    "알비온 기병총": ['r1c11', 'r2c11', 'r3c11', 'r4c11', 'r5c11'],
-    "왕의 수호창": ['r1c12', 'r2c12', 'r3c12', 'r4c12', 'r5c12'],
-    "위대한 유산": ['r1c13', 'r2c13', 'r3c13', 'r4c13', 'r5c13'],
-    "집행자": ['r1c14', 'r2c14', 'r3c14', 'r4c14', 'r5c14'],
-    "천리안": ['r1c15', 'r2c15', 'r3c15', 'r4c15', 'r5c15'],
-    "천벌": ['r1c16', 'r2c16', 'r3c16', 'r4c16', 'r5c16'],
-    "청풍뎅이": ['r1c17', 'r2c17', 'r3c17', 'r4c17', 'r5c17'],
-    "최후의 걸작": ['r1c18', 'r2c18', 'r3c18', 'r4c18', 'r5c18'],
-};
+        function createTable(headers, dataRows) {
+            const table = document.createElement('table');
+            table.className = 'table table-striped'; // CSS 클래스 확인
 
-const resources = ['고분자 융합체', '합성 광섬유', '나노 튜브', '연구 도면'];
+            const headerRow = document.createElement('tr');
+            headers.forEach(header => {
+                const th = document.createElement('th');
+                th.textContent = header;
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
 
-// 블러 상태를 로컬 스토리지에 저장
-function saveBlurState() {
-    console.log('Saving blur state to local storage');
+            dataRows.forEach(rowData => {
+                const tr = document.createElement('tr');
+                rowData.forEach(data => {
+                    const td = document.createElement('td');
+                    td.textContent = data;
+                    tr.appendChild(td);
+                });
+                table.appendChild(tr);
+            });
 
-    const blurredCells = Array.from(document.querySelectorAll('td.blurred')).map(cell => cell.className);
-    localStorage.setItem('blurredCells', JSON.stringify(blurredCells));
-}
-
-// 블러 상태를 로컬 스토리지에서 복원
-function restoreBlurState() {
-    console.log('Restoring blur state from local storage');
-
-    const blurredCells = JSON.parse(localStorage.getItem('blurredCells') || '[]');
-    blurredCells.forEach(cellClass => {
-        const cell = document.querySelector(`.${cellClass}`);
-        if (cell) {
-            cell.classList.add('blurred');
-            cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
+            return table;
         }
-    });
-}
 
-// 필드 값 저장
-function saveToLocalStorage() {
-    console.log('Saving data to local storage');
 
-    Object.values(weapons).flat().forEach(cellClass => {
-        const input = document.querySelector(`.${cellClass}`);
-        if (input) {
-            localStorage.setItem(cellClass, input.value);
-            console.log(`Saved ${cellClass} with value ${input.value}`);
-        }
-    });
+        // 캐릭터 및 부품 데이터
+        const weaponNames = [
+            "간파하는 자", "검의 잔광", "관통하는 빛", "그렉의 뒤바뀐 운명", "나제스트라의 헌신",
+            "복원된 유물", "비단뱀", "비밀정원", "빛의 파도", "산산조각",
+            "알비온 기병총", "왕의 수호창", "위대한 유산", "집행자", "천리안",
+            "천벌", "청풍뎅이", "최후의 걸작"
+        ];
 
-    document.querySelectorAll('input[type="number"].completed').forEach(input => {
-        if (input) {
-            localStorage.setItem(input.className, input.value);
-            console.log(`Saved ${input.className} with value ${input.value}`);
-        }
-    });
-}
+        const weaponResources = ['고분자 융합체', '합성 광섬유', '나노 튜브', '연구 도면', '완성한 개수'];
+        const weaponMaxCols = weaponResources.length;
 
-// 필드 값 복원
-function loadFromLocalStorage() {
-    console.log('Loading data from local storage');
+        // 무기와 해당 입력 필드에 매핑될 클래스 이름을 저장하는 객체
+        const weaponClasses = weaponNames.reduce((acc, weapon, index) => {
+            acc[weapon] = Array.from({ length: weaponMaxCols }, (_, colIndex) => `r${colIndex + 1}c${index + 1}`);
+            return acc;
+        }, {});
 
-    Object.values(weapons).flat().forEach(cellClass => {
-        const input = document.querySelector(`.${cellClass}`);
-        if (input) {
-            const savedValue = localStorage.getItem(cellClass);
-            if (savedValue) {
-                input.value = savedValue;
-                console.log(`Loaded ${cellClass} with value ${savedValue}`);
+        // 테이블 본문 참조
+        const weaponTbody = document.querySelector("#weapon-table tbody");
+
+        // 각 무기와 재료의 행 생성
+        weaponNames.forEach((weapon, rowIndex) => {
+            const row = document.createElement("tr");
+
+            // 무기 이름 셀 추가
+            const weaponCell = document.createElement("td");
+            weaponCell.textContent = weapon;
+            row.appendChild(weaponCell);
+
+            // 재료 입력란 추가
+            for (let colIndex = 1; colIndex <= weaponMaxCols; colIndex++) {
+                const inputCell = document.createElement("td");
+                const input = document.createElement("input");
+                input.type = "number";
+                input.min = "0";
+                input.max = "5";
+                input.className = `r${colIndex}c${rowIndex + 1}`;
+                inputCell.appendChild(input);
+                row.appendChild(inputCell);
             }
+
+            // 행을 테이블에 추가
+            weaponTbody.appendChild(row);
+        });
+
+        // 블러 상태를 로컬 스토리지에 저장
+        function weaponSaveBlurState() {
+            console.log('Saving blur state to local storage');
+
+            const blurredCells = Array.from(document.querySelectorAll('td.blurred')).map(cell => cell.className);
+            localStorage.setItem('blurredCells', JSON.stringify(blurredCells));
         }
-    });
 
-    document.querySelectorAll('input[type="number"].completed').forEach(input => {
-        if (input) {
-            const savedValue = localStorage.getItem(input.className);
-            if (savedValue) {
-                input.value = savedValue;
-                console.log(`Loaded ${input.className} with value ${savedValue}`);
-            }
+        // 블러 상태를 로컬 스토리지에서 복원
+        function weaponRestoreBlurState() {
+            console.log('Restoring blur state from local storage');
+
+            const blurredCells = JSON.parse(localStorage.getItem('blurredCells') || '[]');
+            blurredCells.forEach(cellClass => {
+                const cell = document.querySelector(`.${cellClass}`);
+                if (cell) {
+                    cell.classList.add('blurred');
+                    cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
+                }
+            });
         }
-    });
-}
 
-// 필드 값과 블러 상태를 업데이트
-function checkAndBlur() {
-    console.log('Check and Blur Function Called');
+        // 필드 값 저장
+        function weaponSaveToLocalStorage() {
+            console.log('Saving data to local storage');
 
-    const table = document.querySelector('table');
-    const rows = table.getElementsByTagName('tr');
-
-    // 블러 처리가 필요한 모든 셀 처리
-    for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].getElementsByTagName('td');
-        for (let j = 0; j < cells.length; j++) {
-            const cell = cells[j];
-            const cellText = cell.textContent.trim();
-            let shouldBlur = false;
-
-            // 무기와 자원의 블러 처리
-            Object.keys(weapons).forEach(weapon => {
-                if (cellText.includes(weapon)) {
-                    resources.forEach((resource, index) => {
-                        if (cellText.includes(resource)) {
-                            const inputValue = Number(document.querySelector(`.${weapons[weapon][index]}`).value);
-                            if (inputValue >= 5) {
-                                shouldBlur = true;
-                            }
-                        }
-                    });
+            Object.values(weaponClasses).flat().forEach(cellClass => {
+                const input = document.querySelector(`.${cellClass}`);
+                if (input) {
+                    localStorage.setItem(cellClass, input.value);
+                    console.log(`Saved ${cellClass} with value ${input.value}`);
                 }
             });
 
-            if (shouldBlur) {
-                cell.classList.add('blurred');
-                cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
-                console.log(`Cell ${cell.className} added blurred class and background color`);
-            } else {
-                cell.classList.remove('blurred');
-                cell.style.backgroundColor = ''; // 배경 색 초기화
-                console.log(`Cell ${cell.className} removed blurred class`);
-            }
-        }
-    }
-
-    // 블러 상태를 로컬 스토리지에 저장
-    saveBlurState();
-}
-
-// 이벤트 리스너 추가
-Object.values(weapons).flat().forEach(inputClass => {
-    const inputs = document.querySelectorAll(`.${inputClass}`);
-    inputs.forEach(input => {
-        if (input) {
-            input.addEventListener('input', () => {
-                checkAndBlur();
-                saveToLocalStorage();
+            document.querySelectorAll('input[type="number"].completed').forEach(input => {
+                if (input) {
+                    localStorage.setItem(input.className, input.value);
+                    console.log(`Saved ${input.className} with value ${input.value}`);
+                }
             });
-            console.log(`Event listener added to input ${input.className}`);
         }
-    });
-});
 
-// '완성한 개수' 입력 필드에 이벤트 리스너 추가
-document.querySelectorAll('input[type="number"].completed').forEach(input => {
-    if (input) {
-        input.addEventListener('input', () => {
-            checkAndBlur();
-            saveToLocalStorage();
+        // 필드 값 복원
+        function weaponLoadFromLocalStorage() {
+            console.log('Loading data from local storage');
+
+            Object.values(weaponClasses).flat().forEach(cellClass => {
+                const input = document.querySelector(`.${cellClass}`);
+                if (input) {
+                    const savedValue = localStorage.getItem(cellClass);
+                    if (savedValue) {
+                        input.value = savedValue;
+                        console.log(`Loaded ${cellClass} with value ${savedValue}`);
+                    }
+                }
+            });
+
+            document.querySelectorAll('input[type="number"].completed').forEach(input => {
+                if (input) {
+                    const savedValue = localStorage.getItem(input.className);
+                    if (savedValue) {
+                        input.value = savedValue;
+                        console.log(`Loaded ${input.className} with value ${savedValue}`);
+                    }
+                }
+            });
+        }
+
+        // 필드 값과 블러 상태를 업데이트
+        function weaponCheckAndBlur() {
+            console.log('Check and Blur Function Called');
+
+            const table = document.querySelector('table');
+            const rows = table.getElementsByTagName('tr');
+
+            // 블러 처리가 필요한 모든 셀 처리
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                for (let j = 0; j < cells.length; j++) {
+                    const cell = cells[j];
+                    const cellText = cell.textContent.trim();
+                    let shouldBlur = false;
+
+                    // 무기와 자원의 블러 처리
+                    Object.keys(weaponClasses).forEach(weapon => {
+                        if (cellText.includes(weapon)) {
+                            weaponResources.forEach((resource, index) => {
+                                if (cellText.includes(resource)) {
+                                    const inputValue = Number(document.querySelector(`.${weaponClasses[weapon][index]}`).value);
+                                    if (inputValue >= 5) {
+                                        shouldBlur = true;
+                                    }
+                                }
+                            });
+                        }
+                    });
+
+                    if (shouldBlur) {
+                        cell.classList.add('blurred');
+                        cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
+                        console.log(`Cell ${cell.className} added blurred class and background color`);
+                    } else {
+                        cell.classList.remove('blurred');
+                        cell.style.backgroundColor = ''; // 배경 색 초기화
+                        console.log(`Cell ${cell.className} removed blurred class`);
+                    }
+                }
+            }
+
+            // 블러 상태를 로컬 스토리지에 저장
+            weaponSaveBlurState();
+        }
+
+        // 이벤트 리스너 추가
+        Object.values(weaponClasses).flat().forEach(inputClass => {
+            const inputs = document.querySelectorAll(`.${inputClass}`);
+            inputs.forEach(input => {
+                if (input) {
+                    input.addEventListener('input', () => {
+                        weaponCheckAndBlur();
+                        weaponSaveToLocalStorage();
+                    });
+                    console.log(`Event listener added to input ${input.className}`);
+                }
+            });
         });
-        console.log(`Event listener added to completion input ${input.className}`);
-    }
-});
 
-// 페이지 로드 시 상태 복원
-document.addEventListener('DOMContentLoaded', () => {
-    loadFromLocalStorage();
-    restoreBlurState(); // 필드 값 복원 후 블러 상태 복원
-    checkAndBlur(); // 블러 상태를 다시 업데이트
-});
+        // '완성한 개수' 입력 필드에 이벤트 리스너 추가
+        document.querySelectorAll('input[type="number"].completed').forEach(input => {
+            if (input) {
+                input.addEventListener('input', () => {
+                    weaponCheckAndBlur();
+                    weaponSaveToLocalStorage();
+                });
+                console.log(`Event listener added to completion input ${input.className}`);
+            }
+        });
 
+        // 페이지 로드 시 상태 복원
+        document.addEventListener('DOMContentLoaded', () => {
+            weaponLoadFromLocalStorage();
+            weaponRestoreBlurState(); // 필드 값 복원 후 블러 상태 복원
+            weaponCheckAndBlur(); // 블러 상태를 다시 업데이트
+        });
 
+        const characterNames = [
+            '얼티밋 글레이', '얼티밋 레픽', '얼티밋 버니', '얼티밋 비에사', '얼티밋 밸비', '얼티밋 에이잭스',
+            '일반 글레이', '일반 레픽', '일반 밸비', '일반 비에사', '일반 에시모', '일반 에이잭스',
+            '일반 엔조', '일반 유진', '일반 제이버', '일반 카일', '일반 루나'
+        ];
 
+        const characterParts = ['강화 세포 도면', '안정화 장치 도면', '나선 촉매 도면', '코드'];
+        const characterMaxCols = characterParts.length;
+
+        // 캐릭터와 부품을 매핑할 클래스 이름 저장 객체 생성
+        const characterCellClasses = characterNames.reduce((acc, character, rowIndex) => {
+            acc[character] = Array.from({ length: characterMaxCols }, (_, colIndex) => `character-r${colIndex + 1}character-c${rowIndex + 1}`);
+            return acc;
+        }, {});
+
+        // 테이블 본문 참조
+        const characterTbody = document.querySelector("#character-table tbody");
+
+        // 각 캐릭터와 부품의 행 생성
+        characterNames.forEach((character, rowIndex) => {
+            const row = document.createElement("tr");
+
+            // 캐릭터 이름 셀 추가
+            const characterCell = document.createElement("td");
+            characterCell.textContent = character;
+            row.appendChild(characterCell);
+
+            // 부품 입력란 추가
+            for (let colIndex = 1; colIndex <= characterMaxCols; colIndex++) {
+                const inputCell = document.createElement("td");
+                const input = document.createElement("input");
+                input.type = "number";
+                input.min = "0";
+                input.max = "5";
+                input.className = `character-r${colIndex}character-c${rowIndex + 1}`;
+                inputCell.appendChild(input);
+                row.appendChild(inputCell);
+            }
+
+            // 행을 테이블에 추가
+            characterTbody.appendChild(row);
+        });
+
+        // 블러 상태를 로컬 스토리지에 저장
+        function characterSaveBlurState() {
+            console.log('Saving blur state to local storage');
+
+            const blurredCells = Array.from(document.querySelectorAll('td.blurred')).map(cell => cell.className);
+            localStorage.setItem('characterBlurredCells', JSON.stringify(blurredCells));
+        }
+
+        // 블러 상태를 로컬 스토리지에서 복원
+        function characterRestoreBlurState() {
+            console.log('Restoring blur state from local storage');
+
+            const blurredCells = JSON.parse(localStorage.getItem('characterBlurredCells') || '[]');
+            blurredCells.forEach(cellClass => {
+                const cell = document.querySelector(`.${cellClass}`);
+                if (cell) {
+                    cell.classList.add('blurred');
+                    cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
+                }
+            });
+        }
+
+        // 필드 값 저장
+        function characterSaveToLocalStorage() {
+            console.log('Saving data to local storage');
+
+            Object.values(characterCellClasses).flat().forEach(cellClass => {
+                const input = document.querySelector(`.${cellClass}`);
+                if (input) {
+                    localStorage.setItem(cellClass, input.value);
+                    console.log(`Saved ${cellClass} with value ${input.value}`);
+                }
+            });
+
+            document.querySelectorAll('input[type="number"].completed').forEach(input => {
+                if (input) {
+                    localStorage.setItem(input.className, input.value);
+                    console.log(`Saved ${input.className} with value ${input.value}`);
+                }
+            });
+        }
+
+        // 필드 값 복원
+        function characterLoadFromLocalStorage() {
+            console.log('Loading data from local storage');
+
+            Object.values(characterCellClasses).flat().forEach(cellClass => {
+                const input = document.querySelector(`.${cellClass}`);
+                if (input) {
+                    const savedValue = localStorage.getItem(cellClass);
+                    if (savedValue) {
+                        input.value = savedValue;
+                        console.log(`Loaded ${cellClass} with value ${savedValue}`);
+                    }
+                }
+            });
+
+            document.querySelectorAll('input[type="number"].completed').forEach(input => {
+                if (input) {
+                    const savedValue = localStorage.getItem(input.className);
+                    if (savedValue) {
+                        input.value = savedValue;
+                        console.log(`Loaded ${input.className} with value ${savedValue}`);
+                    }
+                }
+            });
+        }
+
+        // 필드 값과 블러 상태를 업데이트
+        function characterCheckAndBlur() {
+            console.log('Check and Blur Function Called');
+
+            const table = document.querySelector('table');
+            const rows = table.getElementsByTagName('tr');
+
+            // 블러 처리가 필요한 모든 셀 처리
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                for (let j = 0; j < cells.length; j++) {
+                    const cell = cells[j];
+                    const cellText = cell.textContent.trim();
+                    let shouldBlur = false;
+
+                    // 캐릭터와 부품의 블러 처리
+                    Object.keys(characterCellClasses).forEach(character => {
+                        if (cellText.includes(character)) {
+                            characterParts.forEach((part, index) => {
+                                if (cellText.includes(part)) {
+                                    const inputValue = Number(document.querySelector(`.${characterCellClasses[character][index]}`).value);
+                                    if (inputValue >= 5) {
+                                        shouldBlur = true;
+                                    }
+                                }
+                            });
+                        }
+                    });
+
+                    if (shouldBlur) {
+                        cell.classList.add('blurred');
+                        cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
+                        console.log(`Cell ${cell.className} added blurred class and background color`);
+                    } else {
+                        cell.classList.remove('blurred');
+                        cell.style.backgroundColor = ''; // 배경 색 초기화
+                        console.log(`Cell ${cell.className} removed blurred class`);
+                    }
+                }
+            }
+
+            // 블러 상태를 로컬 스토리지에 저장
+            characterSaveBlurState();
+        }
+
+        // 이벤트 리스너 추가
+        Object.values(characterCellClasses).flat().forEach(inputClass => {
+            const inputs = document.querySelectorAll(`.${inputClass}`);
+            inputs.forEach(input => {
+                if (input) {
+                    input.addEventListener('input', () => {
+                        characterCheckAndBlur();
+                        characterSaveToLocalStorage();
+                    });
+                    console.log(`Event listener added to input ${input.className}`);
+                }
+            });
+        });
+
+        // '완성한 개수' 입력 필드에 이벤트 리스너 추가
+        document.querySelectorAll('input[type="number"].completed').forEach(input => {
+            if (input) {
+                input.addEventListener('input', () => {
+                    characterCheckAndBlur();
+                    characterSaveToLocalStorage();
+                });
+                console.log(`Event listener added to completion input ${input.className}`);
+            }
+        });
+
+        // 페이지 로드 시 상태 복원
+        document.addEventListener('DOMContentLoaded', () => {
+            characterLoadFromLocalStorage();
+            characterRestoreBlurState(); // 필드 값 복원 후 블러 상태 복원
+            characterCheckAndBlur(); // 블러 상태를 다시 업데이트
+        });
 
         document.getElementById('searchInput1').addEventListener('input', filterTable);
         document.getElementById('searchInput2').addEventListener('input', filterTable);
