@@ -61,11 +61,19 @@
             background-color: #7da7b8;
         }
 
-        .blurred {
+        /* .blurred {
             background-color: #fff;
             opacity: 0.2;
+          
+        } */
+        .weapon_blurred{
+            background-color: #fff;
+            opacity: 0.2;
+        }
 
-            /* 흐리게 처리 */
+        .character_blurred{
+            background-color: #fff;
+            opacity: 0.2;
         }
 
         .highlighted {
@@ -327,7 +335,7 @@
         function weaponSaveBlurState() {
             console.log('Saving blur state to local storage');
 
-            const blurredCells = Array.from(document.querySelectorAll('td.blurred')).map(cell => cell.className);
+            const blurredCells = Array.from(document.querySelectorAll('td.weapon_blurred')).map(cell => cell.className);
             localStorage.setItem('blurredCells', JSON.stringify(blurredCells));
         }
 
@@ -339,7 +347,7 @@
             blurredCells.forEach(cellClass => {
                 const cell = document.querySelector(`.${cellClass}`);
                 if (cell) {
-                    cell.classList.add('blurred');
+                    cell.classList.add('weapon_blurred');
                     cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
                 }
             });
@@ -421,11 +429,11 @@
                     });
 
                     if (shouldBlur) {
-                        cell.classList.add('blurred');
+                        cell.classList.add('weapon_blurred');
                         cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
                         console.log(`Cell ${cell.className} added blurred class and background color`);
                     } else {
-                        cell.classList.remove('blurred');
+                        cell.classList.remove('weapon_blurred');
                         cell.style.backgroundColor = ''; // 배경 색 초기화
                         console.log(`Cell ${cell.className} removed blurred class`);
                     }
@@ -461,13 +469,6 @@
             }
         });
 
-        // 페이지 로드 시 상태 복원
-        document.addEventListener('DOMContentLoaded', () => {
-            weaponLoadFromLocalStorage();
-            weaponRestoreBlurState(); // 필드 값 복원 후 블러 상태 복원
-            weaponCheckAndBlur(); // 블러 상태를 다시 업데이트
-        });
-
         const characterNames = [
             '얼티밋 글레이', '얼티밋 레픽', '얼티밋 버니', '얼티밋 비에사', '얼티밋 밸비', '얼티밋 에이잭스',
             '일반 글레이', '일반 레픽', '일반 밸비', '일반 비에사', '일반 에시모', '일반 에이잭스',
@@ -501,7 +502,7 @@
                 const input = document.createElement("input");
                 input.type = "number";
                 input.min = "0";
-                input.max = "5";
+                input.max = "1";
                 input.className = `character-r${colIndex}character-c${rowIndex + 1}`;
                 inputCell.appendChild(input);
                 row.appendChild(inputCell);
@@ -515,7 +516,7 @@
         function characterSaveBlurState() {
             console.log('Saving blur state to local storage');
 
-            const blurredCells = Array.from(document.querySelectorAll('td.blurred')).map(cell => cell.className);
+            const blurredCells = Array.from(document.querySelectorAll('td.character_blurred')).map(cell => cell.className);
             localStorage.setItem('characterBlurredCells', JSON.stringify(blurredCells));
         }
 
@@ -527,7 +528,7 @@
             blurredCells.forEach(cellClass => {
                 const cell = document.querySelector(`.${cellClass}`);
                 if (cell) {
-                    cell.classList.add('blurred');
+                    cell.classList.add('character_blurred');
                     cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
                 }
             });
@@ -600,7 +601,7 @@
                             characterParts.forEach((part, index) => {
                                 if (cellText.includes(part)) {
                                     const inputValue = Number(document.querySelector(`.${characterCellClasses[character][index]}`).value);
-                                    if (inputValue >= 5) {
+                                    if (inputValue >= 1) {
                                         shouldBlur = true;
                                     }
                                 }
@@ -609,11 +610,11 @@
                     });
 
                     if (shouldBlur) {
-                        cell.classList.add('blurred');
+                        cell.classList.add('character_blurred');
                         cell.style.backgroundColor = '#f0f0f0'; // 배경 색 변경
                         console.log(`Cell ${cell.className} added blurred class and background color`);
                     } else {
-                        cell.classList.remove('blurred');
+                        cell.classList.remove('character_blurred');
                         cell.style.backgroundColor = ''; // 배경 색 초기화
                         console.log(`Cell ${cell.className} removed blurred class`);
                     }
@@ -651,6 +652,10 @@
 
         // 페이지 로드 시 상태 복원
         document.addEventListener('DOMContentLoaded', () => {
+            weaponLoadFromLocalStorage();
+            weaponRestoreBlurState(); // 필드 값 복원 후 블러 상태 복원
+            weaponCheckAndBlur(); // 블러 상태를 다시 업데이트
+
             characterLoadFromLocalStorage();
             characterRestoreBlurState(); // 필드 값 복원 후 블러 상태 복원
             characterCheckAndBlur(); // 블러 상태를 다시 업데이트
